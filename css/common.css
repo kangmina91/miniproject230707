@@ -1,0 +1,71 @@
+/* common - 공통으로 적용될 것들 */
+
+/* 구글 웹폰트 한글 폰트로 노토 산스랑 영어 폰트로 로보트 */
+@import url('https://fonts.googleapis.com/css2?family=Orbit&display=swap&family=Diphylleia&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+/* 아이콘 xeicon */
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+/* 첫번째 꺼 Roboto 폰트하고, 나머지 적용안된 거는 Noto Sans KR 두번째꺼로, 또 적용안된 나머지는 sans-serif 세번째꺼로 */
+/* font-family: 'Diphylleia', serif; */
+/* font-family: 'Orbit', serif; */
+
+
+
+body {
+    font-family: 'Roboto', 'Noto Sans KR', sans-serif;
+}
+
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+
+.header_inner {
+    max-width: 1900rem;
+    margin: 0 auto;
+    padding: 0 20rem;
+}
+
+
+.inner {
+    max-width: 1200rem;
+    margin: 0 auto;
+    padding: 0 15rem;
+}
+
+.sec {
+    position: relative;
+    padding: 100rem 0;
+}
+
+
+.sec .title h3 {
+    font-size: 40rem;
+    font-weight: 700;
+    margin: 0 0 15rem 0;
+    line-height: 1.5;
+}
+
+.sec .title strong {
+    font-size: 20rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.sec .title p {
+    font-size: 16rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0 0 30rem 0;
+}
+
+/* line-height : 3rem + 3rem */
+
+p {
+    line-height: 1.375;
+}

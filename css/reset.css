@@ -1,0 +1,56 @@
+/* 원래 태그들이 가지고 속성을 리셋하고 편하게 쓰기 */
+* {
+    /* 내가 주는 거 말고 마진 패딩 같은거 가지지 말어라 */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+*:hover {
+    box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+    /* 점 빼기 */
+    list-style: none;
+}
+
+a {
+    /* 줄 그어져 있고 색 들어가 있는 거 빼기 */
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    /* 세로 정렬하겠다 */
+    vertical-align: middle;
+    /* 박스 안에 이미지를 가두겠다 */
+    max-width: 100%;
+}
+
+p {
+    /* 글자 잘 끊어라 */
+    word-break: keep-all;
+}
+
+body {
+    /* 폰트 사이즈만큼 박스를 차지혀라 */
+    line-height: 1;
+    color: #444;
+}
+
+em,
+address {
+    font-style: normal;
+}
