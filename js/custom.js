@@ -72,7 +72,7 @@ $(function () {
     const SwiperScroll = new Swiper(".sub_slide", {
         direction: 'vertical',
         mousewheel: true,
-        slidesPerView: 5,
+        slidesPerView: 1,
         watchOverflow: true,
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
