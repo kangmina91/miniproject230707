@@ -73,6 +73,7 @@ $(function () {
         direction: 'vertical',
         mousewheel: true,
         slidesPerView: 5,
+        centeredSlides: true,
         watchOverflow: true,
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
@@ -81,8 +82,21 @@ $(function () {
             type: "progressbar",
         },
 
-        speed: 100,
+        speed: 1000,
         slideToClickedSlide: true,
+        on: {
+
+            slideChangeTransitionEnd: function () {
+                const realIndex = SwiperScroll.realIndex;
+                console.log(realIndex);
+
+                if (realIndex >= 5)
+
+                    SwiperScroll.slideTo(0, 2000);
+
+
+            }
+        }
 
     });
 
@@ -105,6 +119,7 @@ $(function () {
             delay: 4000,
             disableOnInteraction: false,
         },
+
 
     });
 
