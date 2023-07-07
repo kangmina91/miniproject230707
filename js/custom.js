@@ -91,8 +91,10 @@ $(function () {
                 console.log(realIndex);
 
                 if (realIndex >= 5)
+                    setTimeout(function () {
+                        SwiperScroll.slideTo(0, 1000);
+                    }, 1000);
 
-                    SwiperScroll.slideTo(0, 2000);
 
 
             }
