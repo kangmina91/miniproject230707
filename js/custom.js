@@ -84,25 +84,10 @@ $(function () {
 
         speed: 1000,
         slideToClickedSlide: true,
-        on: {
-
-            slideChangeTransitionEnd: function () {
-                const realIndex = SwiperScroll.realIndex;
-                console.log(realIndex);
-
-                if (realIndex >= 5)
-                    setTimeout(function () {
-                        SwiperScroll.slideTo(0, 1000);
-                    }, 1000);
-
-
-
-            }
-        }
 
     });
 
-    // 다음에 더 발전시켜보기로 ㅠ.ㅠ
+
     // 스와이퍼 메인 슬라이드
     const MainSlide = new Swiper('.main_slide', {
         effect: 'fade',
@@ -122,12 +107,14 @@ $(function () {
             disableOnInteraction: false,
         },
 
+        on: {
+            slideChangeTransitionStart: function () {
+                console.log(this.realIndex);
+                SwiperScroll.slideTo(this.realIndex);
+            }
+        }
 
     });
-
-    MainSlide.controller.control = SwiperScroll;
-    SwiperScroll.controller.control = MainSlide;
-
 
 
     // 브랜드 탭
