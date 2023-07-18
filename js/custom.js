@@ -85,6 +85,7 @@ $(function () {
         speed: 1000,
         slideToClickedSlide: true,
 
+
     });
 
 
@@ -114,7 +115,19 @@ $(function () {
             }
         }
 
+
+
     });
+    // 서브 슬라이드를 클릭하면 메인 슬라이드도 이동한다.
+    const SubSd = document.querySelectorAll(".sub_slide .sub_item_tit")
+    SubSd.forEach((it, idx) => {
+        console.log(it);
+        it.addEventListener('click', e => {
+
+            e.preventDefault();
+            MainSlide.slideTo(idx);
+        })
+    })
 
 
     // 브랜드 탭
